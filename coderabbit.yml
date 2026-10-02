@@ -1,0 +1,21 @@
+language: en-US
+
+reviews:
+  profile: assertive
+  request_changes_workflow: true
+  high_level_summary: true
+  review_status: true
+  poem: false
+  auto_review:
+    enabled: true
+    drafts: false
+  path_instructions:
+    - path: "**"
+      instructions: |
+        Review every change rigorously. Prioritize correctness defects, security risks, data loss, broken behavior, and missing tests. Report only actionable findings; do not approve code with unresolved high-impact issues.
+
+        For each finding, identify the exact file and relevant lines, explain the concrete failure scenario and impact, and recommend a specific fix. Be direct and unambiguous. Do not report speculative concerns, personal preferences, or minor style issues unless they cause a real defect.
+
+        Check that tests cover changed behavior and important edge cases. Flag missing or inadequate tests when the change has meaningful regression risk. Do not claim a test failed unless its failure is demonstrated.
+
+        If no major risks are found, end the review with 🎉. Never use it when major risks remain.
